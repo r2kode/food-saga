@@ -9,6 +9,8 @@
     "preview": "vite preview",
     "lint": "eslint --color --no-error-on-unmatched-pattern ./src/**",
     "lint:fix": "eslint --fix --no-error-on-unmatched-pattern ./src/**",
+    "lint:staged": "npx lint-staged",
+    "type-check": "tsc --noEmit --pretty",
     "test": "vitest run",
     "test:watch": "vitest"
   },
@@ -35,6 +37,7 @@
     "eslint-plugin-react": "^7.32.2",
     "husky": "^8.0.3",
     "jsdom": "^21.1.0",
+    "lint-staged": "^13.1.2",
     "prettier": "^2.8.4",
     "typescript": "^4.9.3",
     "vite": "^4.1.0",

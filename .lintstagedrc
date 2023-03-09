@@ -1,0 +1,7 @@
+{
+  "*.{js,ts,tsx}": ["eslint"],
+  "*.{ts,tsx}": [
+    "bash -c tsc --noEmit --pretty",
+    "vitest run --passWithNoTests"
+  ]
+}
