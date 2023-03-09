@@ -5,37 +5,29 @@ module.exports = {
     es2021: true,
   },
   extends: [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended",
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:@typescript-eslint/recommended',
+    'prettier',
   ],
   overrides: [
     {
-      files: ["*.jsx", "*.tsx"],
+      files: ['*.jsx', '*.tsx'],
       rules: {
-        "@typescript-eslint/explicit-function-return-type": "off",
-        "react/react-in-jsx-scope": "off",
+        '@typescript-eslint/explicit-function-return-type': 'off',
+        'react/react-in-jsx-scope': 'off',
       },
     },
   ],
-  parser: "@typescript-eslint/parser",
+  parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaVersion: "latest",
-    sourceType: "module",
+    ecmaVersion: 'latest',
+    sourceType: 'module',
   },
-  plugins: ["react", "@typescript-eslint"],
+  plugins: ['react', '@typescript-eslint'],
   rules: {
-    "space-before-function-paren": [
-      "warn",
-      {
-        anonymous: "always",
-        named: "ignore",
-        asyncArrow: "always",
-      },
-    ],
-    // '@typescript-eslint/consistent-type-definitions': 'warn',
-    "comma-dangle": ["off"],
-    semi: ["off"],
-    "@typescript-eslint/semi": "off",
+    'comma-dangle': ['off'],
+    semi: ['off'],
+    '@typescript-eslint/semi': 'off',
   },
 };
