@@ -26,6 +26,7 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint'],
   rules: {
+    'no-console': 'warn',
     'comma-dangle': ['off'],
     semi: ['off'],
     '@typescript-eslint/semi': 'off',

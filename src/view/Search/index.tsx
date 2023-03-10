@@ -21,7 +21,7 @@ export default function Search() {
       <InputBase
         sx={{ ml: 1, flex: 1 }}
         placeholder="Search Recepes"
-        inputProps={{ 'aria-label': 'search google maps' }}
+        inputProps={{ 'aria-label': 'search for recepes' }}
         onChange={handleSearchInput}
       />
       <IconButton
