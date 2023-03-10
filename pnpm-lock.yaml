@@ -26,6 +26,7 @@ specifiers:
   react-dom: 18.2.0
   react-redux: 8.0.5
   redux-saga: 1.2.2
+  redux-saga-test-plan: ^4.0.6
   typescript: ^4.9.3
   vite: ^4.1.0
   vitest: ^0.29.2
@@ -36,6 +37,7 @@ dependencies:
   react-dom: 18.2.0_react@18.2.0
   react-redux: 8.0.5_3xleytyzprlgycb2ded54tx72i
   redux-saga: 1.2.2
+  redux-saga-test-plan: 4.0.6_redux-saga@1.2.2
 
 devDependencies:
   '@commitlint/cli': 17.4.4
@@ -2352,6 +2354,10 @@ packages:
     dev: true
     optional: true
 
+  /fsm-iterator/1.1.0:
+    resolution: {integrity: sha512-hg47CNYdIGJ5m9WSKh617LHRdvJo4PiF0VkncFLwPVxKvBEQfSPd1qx/xLV/eSusewEu0C8eUFrsLsWlBgIcOg==}
+    dev: false
+
   /function-bind/1.1.1:
     resolution: {integrity: sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==}
     dev: true
@@ -3116,9 +3122,17 @@ packages:
     resolution: {integrity: sha512-TwuEnCnxbc3rAvhf/LbG7tJUDzhqXyFnv3dtzLOPgCG/hODL7WFnsbwktkD7yUV0RrreP/l1PALq/YSg6VvjlA==}
     dev: true
 
+  /lodash.isequal/4.5.0:
+    resolution: {integrity: sha512-pDo3lu8Jhfjqls6GkMgpahsF9kCyayhgykjyLMNFTKWrpVdAQtYyB4muAMWozBB4ig/dtWAmsMxLEI8wuz+DYQ==}
+    dev: false
+
   /lodash.isfunction/3.0.9:
     resolution: {integrity: sha512-AirXNj15uRIMMPihnkInB4i3NHeb4iBtNg9WRWuK2o31S+ePwwNmDPaTL3o7dTJ+VXNZim7rFs4rxN4YU1oUJw==}
     dev: true
+
+  /lodash.ismatch/4.4.0:
+    resolution: {integrity: sha512-fPMfXjGQEV9Xsq/8MTSgUf255gawYRbjwMyDbcvDhXgV7enSZA0hynz6vMPnpAb5iONEzBHBPsT+0zes5Z301g==}
+    dev: false
 
   /lodash.isplainobject/4.0.6:
     resolution: {integrity: sha512-oSXzaWypCMHkPC3NvBEaPHf0KsA5mvPrOPgQWDsbg8n7orZ290M0BmC/jgRZ4vcJ6DTAhjrsSYgdsW/F+MFOBA==}
@@ -3798,6 +3812,19 @@ packages:
       indent-string: 4.0.0
       strip-indent: 3.0.0
     dev: true
+
+  /redux-saga-test-plan/4.0.6_redux-saga@1.2.2:
+    resolution: {integrity: sha512-ESdbFoDWCeJ/EiFdUNSCGtA2CC9tnuvHDm6k06gVFa98EIeR2hpzFkGk9kJ1/hpMUnYFp+OOEEITIrZeDYBfFg==}
+    peerDependencies:
+      '@redux-saga/is': ^1.0.1
+      '@redux-saga/symbols': ^1.0.1
+      redux-saga: ^1.0.1
+    dependencies:
+      fsm-iterator: 1.1.0
+      lodash.isequal: 4.5.0
+      lodash.ismatch: 4.4.0
+      redux-saga: 1.2.2
+    dev: false
 
   /redux-saga/1.2.2:
     resolution: {integrity: sha512-6xAHWgOqRP75MFuLq88waKK9/+6dCdMQjii2TohDMARVHeQ6HZrZoJ9HZ3dLqMWCZ9kj4iuS6CDsujgnovn11A==}
