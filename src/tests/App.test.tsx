@@ -7,5 +7,5 @@ import App from '../App';
 test('App', () => {
   const store = setupStore();
   renderWithProviders(<App />, { store });
-  expect(screen.getByText(/Vite \+ React/i)).toBeInTheDocument();
+  expect(screen.getByLabelText(/search for recepes/i)).toBeInTheDocument();
 });

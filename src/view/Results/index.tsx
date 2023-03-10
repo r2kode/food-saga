@@ -7,7 +7,6 @@ import { Recepes } from '../../models/Recepes';
 
 export default function Results() {
   const { recepes } = useResults();
-  console.log(recepes);
 
   const recepesList = recepes.map(
     ({ id, title }: Pick<Recepes, 'id' | 'title'>) => (
