@@ -1,15 +1,22 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { configureStore, PreloadedState } from '@reduxjs/toolkit';
 import createSagaMiddleware from 'redux-saga';
 import { rootReducer } from '../data/rootReducer';
 import rootSaga from '../sideeffects/rootSaga';
 
-const sagaMiddleware = createSagaMiddleware();
+export function setupStore(preloadedState?: PreloadedState<RootState>) {
+  const sagaMiddleware = createSagaMiddleware();
 
-export const store = configureStore({
-  reducer: rootReducer,
-  middleware: [sagaMiddleware],
-});
+  const store = configureStore({
+    reducer: rootReducer,
+    middleware: [sagaMiddleware],
+    preloadedState,
+  });
 
-sagaMiddleware.run(rootSaga);
+  sagaMiddleware.run(rootSaga);
 
-export type AppState = ReturnType<typeof store.getState>;
+  return store;
+}
+
+export type RootState = ReturnType<typeof rootReducer>;
+export type AppStore = ReturnType<typeof setupStore>;
+export type AppDispatch = AppStore['dispatch'];

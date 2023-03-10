@@ -4,4 +4,6 @@
 
 [Redux Toolkit](https://redux-toolkit.js.org/)
 
-[Doman Code example](https://codesandbox.io/s/doman-code-redux-typescript-554u9)
+[Doman Code example](https://codesandbox.io/s/doman-code-redux-testy-19zqse)
+
+[Redux docs | Writing tests](https://redux.js.org/usage/writing-tests)

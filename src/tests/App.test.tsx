@@ -1,8 +1,11 @@
 import { test, expect } from 'vitest';
-import { render, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
+import { renderWithProviders } from '../test-utils/renderWithProviders';
+import { setupStore } from '../store';
 import App from '../App';
 
 test('App', () => {
-  render(<App />);
+  const store = setupStore();
+  renderWithProviders(<App />, { store });
   expect(screen.getByText(/Vite \+ React/i)).toBeInTheDocument();
 });

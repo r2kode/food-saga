@@ -1,13 +1,13 @@
 import { createAction, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RecepesResponse, Recepes, ResponseError } from '../../models';
-import { AppState } from '../../store';
+import { RootState } from '../../store';
 
 type SpoonacularState = {
   data: Recepes[];
   error: ResponseError;
 };
 
-const initialState: SpoonacularState = {
+export const initialState: SpoonacularState = {
   data: [],
   error: null,
 };
@@ -32,7 +32,7 @@ export const spoonacularActions = {
   fetchFailure: createAction<ResponseError>('spoonacular/fetchFailure'),
 };
 
-export const selectSpoonacularData = (state: AppState) =>
+export const selectSpoonacularData = (state: RootState) =>
   state.spoonacular.data;
 
 export default slice.reducer;
