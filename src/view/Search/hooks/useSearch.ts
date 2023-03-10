@@ -1,6 +1,6 @@
 import { SetStateAction, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { spoonacularActions } from '../../../data/spoonacular';
+import { spoonacularActions } from '@/data/spoonacular';
 
 export const useSearch = () => {
   const [searchPhrase, setSearchPhrase] = useState('');

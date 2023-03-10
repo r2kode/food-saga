@@ -1,8 +1,8 @@
 import { PayloadAction } from '@reduxjs/toolkit';
 import { call, put, takeLatest } from 'redux-saga/effects';
-import { getRecepes } from '../../api/spoonacular';
-import { spoonacularActions } from '../../data/spoonacular';
-import { RecepesResponse } from '../../models';
+import { getRecepes } from '@/api/spoonacular';
+import { spoonacularActions } from '@/data/spoonacular';
+import { RecepesResponse } from '@/models';
 
 export function* fetchRecepes({ payload }: PayloadAction<string>) {
   try {
